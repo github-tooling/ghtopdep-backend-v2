@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  fastify:
+    build: .
+    container_name: fastify
+    depends_on:
+      - redis
+    ports:
+      - "3000:3000"
+  redis:
+    image: redis
+    ports:
+      - "6380:6379"
+    command: >
+      --requirepass ${REDIS_PASSWORD}
