@@ -10,7 +10,7 @@ module.exports = async function (fastify, opts) {
   });
 
   fastify.register(require('@fastify/static'), {
-    root: path.join(__dirname, 'public'),
+    root: path.join(__dirname, 'build'),
   });
 
   // Do not touch the following lines
