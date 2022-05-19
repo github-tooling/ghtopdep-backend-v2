@@ -9,6 +9,11 @@ module.exports = async function (fastify, opts) {
     // put your options here
   });
 
+  fastify.register(require('@fastify/static'), {
+    root: path.join(__dirname, 'public'),
+    prefix: '/public/', // optional: default '/'
+  });
+
   // Do not touch the following lines
 
   // This loads all plugins defined in plugins
