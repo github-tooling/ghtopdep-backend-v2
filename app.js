@@ -11,7 +11,6 @@ module.exports = async function (fastify, opts) {
 
   fastify.register(require('@fastify/static'), {
     root: path.join(__dirname, 'public'),
-    prefix: '/public/', // optional: default '/'
   });
 
   // Do not touch the following lines
